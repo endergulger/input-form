@@ -19,7 +19,6 @@ function App() {
         <br></br>
         <UploadButtons />
       </header>
-      <EnhancedTable />
     </div>
   );
 }

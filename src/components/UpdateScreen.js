@@ -2,8 +2,9 @@ import React from "react";
 import { FirebaseAddData } from "../FirebaseAddData";
 import AnotherPage from "../AnotherPage";
 import { Link } from "react-router-dom";
+import FirebaseUpdateDelete from "../FirebaseUpdateDelete";
 
-export class RegisterScreen extends React.Component {
+export class UpdateScreen extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,37 +36,25 @@ export class RegisterScreen extends React.Component {
   render() {
     return (
       <div className='base-container' ref={this.props.containerRef}>
-        <div className='header'>Register</div>
+        <div className='header'>Update Screen</div>
         <div className='content'>
           <div className='image'></div>
           <div className='form'>
-            <div className='form-group'>
-              <label htmlFor='username'>Username</label>
-              <input type='text' name='username' placeholder='username' onChange={(event) => this.updateInput(event, "username")} />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='email'>Email</label>
-              <input type='text' name='email' placeholder='email' onChange={(event) => this.updateInput(event, "email")} />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='password'>Password</label>
-              <input type='text' name='password' placeholder='password' onChange={(event) => this.updateInput(event, "password")} />
-            </div>
-            <div className='footer'>
-              <button type='button' disabled={!this.state.username || !this.state.email || !this.state.password} className='btn' onClick={this.handleSubmit}>
-                Register
-              </button>
-            </div>
+            <FirebaseUpdateDelete />
             <br />
             <AnotherPage />
+            <br />
             <ul>
-              <Link to='datatable'>Data Page</Link>
+              <Link to='/datatable'>Data Page</Link>
+              <br></br>
+              <Link to='/'>Home Page</Link>
             </ul>
           </div>
         </div>
+        <br />
       </div>
     );
   }
 }
 
-export default RegisterScreen;
+export default UpdateScreen;

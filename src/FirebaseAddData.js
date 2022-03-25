@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import db from "./FirebaseApp";
 
-export const FirebaseVeriEkleme = async (username, email, password) => {
+export const FirebaseAddData = async (username, email, password) => {
   try {
     const docRef = await addDoc(collection(db, "users"), {
       username,

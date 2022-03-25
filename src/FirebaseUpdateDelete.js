@@ -67,8 +67,8 @@ function FirebaseUpdateDelete() {
         </div>
         <button onClick={updateData}>Update</button>
       </div>
-      <table>
-        <thead>
+      <thead>
+        <table>
           <tr>
             <th>Username</th>
             <br />
@@ -107,8 +107,8 @@ function FirebaseUpdateDelete() {
               </td>
             </tr>
           ))}
-        </thead>
-      </table>
+        </table>
+      </thead>
     </div>
   );
 }

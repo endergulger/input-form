@@ -42,9 +42,8 @@ export default function DataGridDemo() {
 
   console.log(usersData);
   return (
-    <div style={{ height: 400, width: "100%" }}>
+    <div style={{ height: 400, width: "50%" }}>
       <DataGrid rows={usersData} columns={columns} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection disableSelectionOnClick />
-
       <ul>
         <Link to='/'>Home Page</Link>
       </ul>
